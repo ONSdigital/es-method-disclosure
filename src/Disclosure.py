@@ -11,16 +11,17 @@ def apply(input):
 
 #Disclosure stage 1 method
 def disclosure_stage_1(cur_period):
-    #client = Algorithmia.client()
-    #file = client.file("")
+    client = Algorithmia.client()
+    file = client.file("")
+    df = pd.read_csv(file)
 
 
     #file = ""
-    df = pd.read_csv(file, dtype={"Q601_asphalting_sand": int, 'Q602_building_soft_sand': int,
-                                             'Q603_concreting_sand': int, 'Q604_bituminous_gravel': int,
-                                             'Q605_concreting_gravel': int, 'Q606_other_gravel': int,
-                                             'Q607_constructional_fill': int, 'Q608_total': int,
-                                             'enterprise_ref': int, 'period': int, 'region': int})
+    #df = pd.read_csv(file, dtype={"Q601_asphalting_sand": int, 'Q602_building_soft_sand': int,
+                                             #'Q603_concreting_sand': int, 'Q604_bituminous_gravel': int,
+                                             #'Q605_concreting_gravel': int, 'Q606_other_gravel': int,
+                                             #'Q607_constructional_fill': int, 'Q608_total': int,
+                                             #'enterprise_ref': int, 'period': int, 'region': int})
 
     df["disclosive"] = None
     df["publish"] = None
