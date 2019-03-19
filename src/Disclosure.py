@@ -9,6 +9,7 @@ def apply(input):
     bob = disclosure_stage_1(cur_period)
     return bob
 
+#Disclosure stage 1 method
 def disclosure_stage_1(cur_period):
     #client = Algorithmia.client()
     #file = client.file("data://gmreynolds/TestData/vfs.csv")
