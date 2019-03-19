@@ -12,10 +12,10 @@ def apply(input):
 #Disclosure stage 1 method
 def disclosure_stage_1(cur_period):
     #client = Algorithmia.client()
-    #file = client.file("data://gmreynolds/TestData/vfs.csv")
+    #file = client.file("")
 
 
-    file = "C:\\Users\\Off.Network.User9\\Desktop\\disclosure\\src\\vfs.csv"
+    #file = ""
     df = pd.read_csv(file, dtype={"Q601_asphalting_sand": int, 'Q602_building_soft_sand': int,
                                              'Q603_concreting_sand': int, 'Q604_bituminous_gravel': int,
                                              'Q605_concreting_gravel': int, 'Q606_other_gravel': int,
@@ -31,7 +31,7 @@ def disclosure_stage_1(cur_period):
         if(row['Q608_total'] == 0):
             row['disclosive'] = 'N'
             row['publish'] = 'Publish'
-            row['reason'] = 'Stage 1 - Q608 total is zero'
+            row['reason'] = ' Total is zero'
         else:
             row['disclosive'] = 'Y'
             row['publish'] = 'N/A'
