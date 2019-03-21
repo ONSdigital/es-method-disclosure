@@ -8,9 +8,9 @@ client = Algorithmia.client()
 
 def _get_fh(data_url):
     """
-    Opens algorithmia data urls and returns a file object.
+    Opens Algorithmia data urls and returns a file object.
 
-    :param filepath: data url to open.
+    :param data_url: data url to open.
     :return: file object.
     :raises: AlgorithmException.
     """
@@ -29,8 +29,8 @@ def _get_traceback(exception):
     """
     Given an exception, returns the traceback as a string.
 
-    :param exception: Exception object
-    :return: string
+    :param exception: Exception object.
+    :return: String.
     """
     return ''.join(
         traceback.format_exception(
@@ -42,8 +42,8 @@ def _get_traceback(exception):
 def apply(input):
     """
     Main method that runs Disclosure function(s).
-    :param input: JSON string
-    :return: JSON string
+    :param input: JSON string.
+    :return: JSON string.
     """
     cur_period = 201706
     try:
@@ -83,9 +83,9 @@ def apply(input):
 def disclosure(input_df, cur_period):
     """
     Reading in a csv, converting to a data frame and converting some cols to int.
-    :param input_df: The csv file that is converted into a dataframe
-    :param cur_period: The current period for the results process
-    :return: None
+    :param input_df: The csv file that is converted into a data frame.
+    :param cur_period: The current period for the results process.
+    :return: None.
     """
 
     input_df = pd.read_csv(input_df, dtype={"Q601_asphalting_sand": int,
