@@ -124,10 +124,7 @@ def disclosure(input_df, cur_period):
                                  'Q602_building_soft_sand': 'sum', 'Q601_asphalting_sand': 'sum',
                                  'enterprise_ref': 'nunique'})
     region_agg = region_agg.apply(run_disclosure, axis=1)
-    print("end result\n", region_agg)
     # regionlorm = disaggregated_data.groupby(['region'])
     region_agg_lorm = disaggregated_data.groupby(['region', 'land_or_marine'])
-    print("this is regionlorm\n", region_agg)
-    print("this is regionagglorm\n", region_agg_lorm)
 
     return region_agg_lorm
